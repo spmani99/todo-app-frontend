@@ -37,7 +37,6 @@ function ListTodosComponent() {
   }
 
   function deleteTodo(id) {
-    console.log("clicked " + id);
     deleteTodoApi(username, id)
       .then(
         () => {
@@ -47,7 +46,7 @@ function ListTodosComponent() {
         //1: Display message
         //2: Update Todos list
       )
-      .catch((error) => console.log(error));
+      .catch((error) => error);
   }
 
   function updateTodo(id) {

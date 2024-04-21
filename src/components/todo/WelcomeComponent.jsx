@@ -9,8 +9,6 @@ function WelcomeComponent() {
   const [message, setMessage] = useState(null);
 
   function callHelloWorldRestApi() {
-    console.log("called");
-
     retrieveHelloWorldPathVariable("Ranga")
       .then((response) => successfulResponse(response))
       .catch((error) => errorResponse(error))
@@ -18,7 +16,6 @@ function WelcomeComponent() {
   }
 
   function successfulResponse(response) {
-    console.log(response);
     setMessage(response.data.message);
   }
 
