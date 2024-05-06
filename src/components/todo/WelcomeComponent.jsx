@@ -9,7 +9,7 @@ function WelcomeComponent() {
   const [message, setMessage] = useState(null);
 
   function callHelloWorldRestApi() {
-    retrieveHelloWorldPathVariable("Ranga")
+    retrieveHelloWorldPathVariable("User")
       .then((response) => successfulResponse(response))
       .catch((error) => errorResponse(error))
       .finally(() => console.log("cleanup"));
