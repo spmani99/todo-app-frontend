@@ -21,10 +21,11 @@ export default function TodoComponent() {
 
   const username = authContext.username;
 
-  useEffect(() => retrieveTodos(), [id]);
+  useEffect(() => retrieveTodos(), []);
 
   function retrieveTodos() {
-    if (id != -1) {
+    // @ts-ignore
+    if (id !== -1) {
       retrieveTodoApi(username, id)
         .then((response) => {
           setDescription(response.data.description);
@@ -47,7 +48,8 @@ export default function TodoComponent() {
 
     console.log(todo);
 
-    if (id == -1) {
+    // @ts-ignore
+    if (id === -1) {
       createTodoApi(username, todo)
         .then((response) => {
           navigate("/todos");
@@ -74,7 +76,7 @@ export default function TodoComponent() {
 
     if (
       values.targetDate == null ||
-      values.targetDate == "" ||
+      values.targetDate === "" ||
       !moment(values.targetDate).isValid()
     ) {
       errors.targetDate = "Enter a target date";
