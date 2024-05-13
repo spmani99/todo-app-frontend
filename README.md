@@ -17,4 +17,3 @@ To log in to the Todo App, please use the following credentials:
 - Username: user
 - Password: dummy
 
-Feel free to explore and use the Todo App for managing your tasks efficiently!
